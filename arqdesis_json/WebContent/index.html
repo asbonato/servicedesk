@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Guia de Cervejas</title>
+<link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+	<h2>Página de Seleção de Cervejas</h2>
+	<form method="post" action="selecao.do">
+		<p>Selecione uma ou mais características das cervejas</p>
+		<fieldset>
+			<div>
+				<label>Estilo:</label> <select name="estilo" size="1">
+					<option value=""></option>
+					<option value="india pale ale">india pale ale</option>
+					<option value="lager">lager</option>
+					<option value="pilsner">pilsner</option>
+					<option value="porter">porter</option>
+					<option value="stout">stout</option>
+					<option value="trapistas">trapistas</option>
+					<option value="trigo/weiss">trigo/weiss</option>
+					<option value="tripel">tripel</option>
+				</select>
+			</div>
+			<div>
+				<label>Cor:</label> <select name="cor" size="1">
+					<option value=""></option>
+					<option value="amarela">amarela</option>
+					<option value="amarela-palha">amarela-palha</option>
+					<option value="âmbar">âmbar</option>
+					<option value="cobre-claro">cobre-claro</option>
+					<option value="dourada">dourada</option>
+					<option value="marrom">marrom</option>
+					<option value="marrom-clara">marrom-clara</option>
+					<option value="marrom-escura">marrom-escura</option>
+					<option value="preta">preta</option>
+					<option value="preta-opaca">preta-opaca</option>
+				</select>
+			</div>
+			<div>
+				<label>País:</label> <select name="pais" size="1">
+					<option value=""></option>
+					<option value="Alemanha">Alemanha</option>
+					<option value="Argentina">Argentina</option>
+					<option value="Áustria">Áustria</option>
+					<option value="Austrália">Austrália</option>
+					<option value="Bélgica">Bélgica</option>
+					<option value="Brasil">Brasil</option>
+					<option value="Chile">Chile</option>
+					<option value="Dinamarca">Dinamarca</option>
+					<option value="Escócia">Escócia</option>
+					<option value="Espanha">Espanha</option>
+					<option value="Estados Unidos">Estados Unidos</option>
+					<option value="Inglaterra">Inglaterra</option>
+					<option value="Irlanda">Irlanda</option>
+					<option value="México">México</option>
+					<option value="Uruguai">Uruguai</option>
+				</select>
+			</div>
+		</fieldset>
+		<div>
+			<input type="submit" value="Enviar">
+		</div>
+	</form>
+</body>
+</html>
