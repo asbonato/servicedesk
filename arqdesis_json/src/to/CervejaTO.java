@@ -23,4 +23,8 @@ public class CervejaTO implements Serializable {
 	public ArrayList<Cerveja> getLista(){
 		return lista;
 	}
+	
+	public void setLista(ArrayList<Cerveja> lista){
+		this.lista = lista;
+	}
 }
