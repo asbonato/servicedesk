@@ -54,7 +54,9 @@ public class SelecionarCervejasJSon extends HttpServlet {
 		for(Cerveja cerveja:lista){
 			cerveja.setImagem(url+"/img/"+cerveja.getImagem()+".jpg");
 		}
-		out.println(JSonFacade.listToJSon(lista));
+		String jsonFile = JSonFacade.listToJSon(lista);
+		System.out.println(jsonFile);
+		out.println(jsonFile);
 
 	}
 
