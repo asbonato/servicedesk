@@ -11,8 +11,8 @@ import br.usjt.sdesk.model.entity.Fila;
 public class ChamadoService {
 	ChamadoDAO dao;
 	
-	public ChamadoService(){
-		dao = new ChamadoDAO();
+	public ChamadoService(ChamadoDAO dao){
+		this.dao = dao;
 	}
 	
 	public int novoChamado(Chamado chamado) throws IOException{

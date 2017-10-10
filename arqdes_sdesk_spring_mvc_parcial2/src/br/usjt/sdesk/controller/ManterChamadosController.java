@@ -6,14 +6,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import javax.validation.Valid;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
+import br.usjt.sdesk.model.dao.ChamadoDAO;
 import br.usjt.sdesk.model.entity.Chamado;
 import br.usjt.sdesk.model.entity.Fila;
 import br.usjt.sdesk.model.service.ChamadoService;
@@ -21,6 +14,7 @@ import br.usjt.sdesk.model.service.FilaService;
 
 @Controller
 public class ManterChamadosController {
+	ChamadoDAO dao = new ChamadoDAO();
 
 	@RequestMapping("index")
 	public String inicio() {
