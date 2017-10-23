@@ -2,19 +2,43 @@ package br.usjt.sdesk.model.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-
+@Entity
 public class Chamado {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id_chamado")
 	private int numero;
-	private Date dataAbertura, dataFechamento;
+	
+	@NotNull
+	@Column(name="dt_abertura")
+	private Date dataAbertura;
+	
+	@Column(name="dt_fechamento")
+	private Date dataFechamento;
+	
+	@NotNull
 	private String status;
+	
 	@NotNull 
 	@Size(max=100,min=10, message="O tamanho da descrição deve estar entre 10 e 100 caracteres")
 	private String descricao;
+	
 	@NotNull
+	@ManyToOne
+	@JoinColumn(name="id")
 	private Fila fila;
+	
+	
 	public static final String ABERTO = "aberto";
 	public static final String FECHADO = "fechado";
 	
